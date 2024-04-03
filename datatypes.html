@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Data Types</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Your CSS styles here */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Python Data Types <span class="expand-all" title="Expand All" onclick="toggleExpandAll()">▼</span></h1>
+
+    <!-- Numeric Types -->
+    <div class="data-type-group" id="numeric-types">
+      <h2>Numeric Types <span class="expand" title="Expand" onclick="toggleExpand('numeric-types')">▼</span></h2>
+      <div class="details" style="display: none;">
+        <div class="data-type" id="integer">
+          <h3>Integer (int) <span class="expand" title="Expand" onclick="toggleExpand('integer')">▼</span></h3>
+          <div class="sub-details" style="display: none;">
+            <p><strong>Description:</strong> Integers are whole numbers without a decimal point. They can be positive or negative.</p>
+            <p><strong>Mutability:</strong> Immutable (static).</p>
+            <p><strong>Memory Consumption:</strong> Low.</p>
+            <pre><code class="python">an_integer = 10</code></pre>
+            <p><strong>Use Case:</strong> Storing counts or indices in a program.</p>
+          </div>
+        </div>
+
+        <!-- Float Type -->
+        <div class="data-type" id="float">
+          <h3>Float <span class="expand" title="Expand" onclick="toggleExpand('float')">▼</span></h3>
+          <div class="sub-details" style="display: none;">
+            <p><strong>Description:</strong> Floats represent real numbers with a decimal point.</p>
+            <p><strong>Mutability:</strong> Immutable (static).</p>
+            <p><strong>Memory Consumption:</strong> Low to moderate.</p>
+            <pre><code class="python">a_float = 3.14</code></pre>
+            <p><strong>Use Case:</strong> Representing decimal values in calculations.</p>
+          </div>
+        </div>
+
+        <!-- Complex Type -->
+        <div class="data-type" id="complex">
+          <h3>Complex <span class="expand" title="Expand" onclick="toggleExpand('complex')">▼</span></h3>
+          <div class="sub-details" style="display: none;">
+            <p><strong>Description:</strong> Complex numbers have a real and imaginary part.</p>
+            <p><strong>Mutability:</strong> Immutable (static).</p>
+            <p><strong>Memory Consumption:</strong> Moderate.</p>
+            <pre><code class="python">a_complex = 2 + 3j</code></pre>
+            <p><strong>Use Case:</strong> Complex mathematical calculations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Boolean Type -->
+    <div class="data-type-group" id="boolean">
+      <h2>Boolean Type <span class="expand" title="Expand" onclick="toggleExpand('boolean')">▼</span></h2>
+      <div class="details" style="display: none;">
+        <div class="data-type" id="bool">
+          <h3>Boolean (bool) <span class="expand" title="Expand" onclick="toggleExpand('bool')">▼</span></h3>
+          <div class="sub-details" style="display: none;">
+            <p><strong>Description:</strong> Booleans represent truth values, either True or False.</p>
+            <p><strong>Mutability:</strong> Immutable (static).</p>
+            <p><strong>Memory Consumption:</strong> Very low.</p>
+            <pre><code class="python">a_boolean = True</code></pre>
+            <p><strong>Use Case:</strong> Controlling program flow with conditional statements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sequence Types -->
+    <div class="data-type-group" id="sequence-types">
+      <h2>Sequence Types <span class="expand" title="Expand" onclick="toggleExpand('sequence-types')">▼</span></h2>
+      <div class="details" style="display: none;">
+        <div class="data-type" id="string">
+          <h3>String <span class="expand" title="Expand" onclick="toggleExpand('string')">▼</span></h3>
+          <div class="sub-details" style="display: none;">
+            <p><strong>Description:</strong> Strings represent sequences of characters enclosed in quotes.</p>
+            <p><strong>Mutability:</strong> Immutable (static).</p>
+            <p><strong>Memory Consumption:</strong> Depends on string length.</p>
+            <pre><code class="python">a_string = "Hello, World!"</code></pre>
+            <p><strong>Use Case:</strong> Storing and manipulating textual data.</p>
+          </div>
+        </div>
+
+        <!-- List Type -->
+        <div class="data-type" id="list">
+          <h3>List <span class="expand" title="Expand" onclick="toggleExpand('list')">▼</span></h3>
+          <div class="sub-details" style="display: none;">
+            <p><strong>Description:</strong> Lists are mutable sequences of elements.</p>
+            <p><strong>Mutability:</strong> Mutable (dynamic).</p>
+            <p><strong>Memory Consumption:</strong> Moderate to high.</p>
+            <pre><code class="python">a_list = ["apple", "banana", "cherry"]</code></pre>
+            <p><strong>Use Case:</strong> Storing collections of items that can be modified.</p>
+          </div>
+        </div>
+
+        <!-- Tuple Type -->
+        <div class="data-type" id="tuple">
+          <h3>Tuple <span class="expand" title="Expand" onclick="toggleExpand('tuple')">▼</span></h3>
+          <div class="sub-details" style="display: none;">
+            <p><strong>Description:</strong> Tuples are immutable sequences of elements.</p>
+            <p><strong>Mutability:</strong> Immutable (static).</p>
+            <p><strong>Memory Consumption:</strong> Low to moderate.</p>
+            <pre><code class="python">a_tuple = ("apple", "banana", "cherry")</code></pre>
+            <p><strong>Use Case:</strong> Storing fixed collections of items.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Set Types -->
+    <div class="data-type-group" id="set-types">
+      <h2>Set Types <span class="expand" title="Expand" onclick="toggleExpand('set-types')">▼</span></h2>
+      <div class="details" style="display: none;">
+        <div class="data-type" id="set">
+          <h3>Set <span class="expand" title="Expand" onclick="toggleExpand('set')">▼</span></h3>
+          <div class="sub-details" style="display: none;">
+            <p><strong>Description:</strong> Sets are unordered collections of unique elements.</p>
+            <p><strong>Mutability:</strong> Mutable (dynamic).</p>
+            <p><strong>Memory Consumption:</strong> Moderate to high.</p>
+            <pre><code class="python">a_set = {"apple", "banana", "cherry"}</code></pre>
+            <p><strong>Use Case:</strong> Handling unique elements or removing duplicates.</p>
+          </div>
+        </div>
+
+        <!-- Frozen Set Type -->
+        <div class="data-type" id="frozenset">
+          <h3>Frozen Set <span class="expand" title="Expand" onclick="toggleExpand('frozenset')">▼</span></h3>
+          <div class="sub-details" style="display: none;">
+            <p><strong>Description:</strong> Frozen sets are immutable versions of sets.</p>
+            <p><strong>Mutability:</strong> Immutable (static).</p>
+            <p><strong>Memory Consumption:</strong> Low to moderate.</p>
+            <pre><code class="python">a_frozenset = frozenset({"apple", "banana", "cherry"})</code></pre>
+            <p><strong>Use Case:</strong> Creating hashable sets or fixed sets.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mapping Type -->
+    <div class="data-type-group" id="mapping-type">
+      <h2>Mapping Type <span class="expand" title="Expand" onclick="toggleExpand('mapping-type')">▼</span></h2>
+      <div class="details" style="display: none;">
+        <div class="data-type" id="dictionary">
+          <h3>Dictionary (dict) <span class="expand" title="Expand" onclick="toggleExpand('dictionary')">▼</span></h3>
+          <div class="sub-details" style="display: none;">
+            <p><strong>Description:</strong> Dictionaries are key-value pairs of elements.</p>
+            <p><strong>Mutability:</strong> Mutable (dynamic).</p>
+            <p><strong>Memory Consumption:</strong> Moderate to high.</p>
+            <pre><code class="python">a_dict = {"brand": "Ford", "model": "Mustang", "year": 1964}</code></pre>
+            <p><strong>Use Case:</strong> Storing data with associated keys for fast retrieval.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- None Type -->
+    <div class="data-type-group" id="none-type">
+      <h2>None Type <span class="expand" title="Expand" onclick="toggleExpand('none-type')">▼</span></h2>
+      <div class="details" style="display: none;">
+        <div class="data-type" id="none">
+          <h3>None (NoneType) <span class="expand" title="Expand" onclick="toggleExpand('none')">▼</span></h3>
+          <div class="sub-details" style="display: none;">
+            <p><strong>Description:</strong> None represents the absence of a value or a null value.</p>
+            <p><strong>Mutability:</strong> Immutable (static).</p>
+            <p><strong>Memory Consumption:</strong> Very low.</p>
+            <pre><code class="python">a_none = None</code></pre>
+            <p><strong>Use Case:</strong> Initializing variables or denoting missing values.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleExpand(id) {
+      const element = document.getElementById(id);
+      const subDetails = element.querySelector('.sub-details');
+      const expandIcon = element.querySelector('.expand');
+
+      if (subDetails.style.display === 'none') {
+        subDetails.style.display = 'block';
+        expandIcon.textContent = '▼';
+      } else {
+        subDetails.style.display = 'none';
+        expandIcon.textContent = '▶';
+      }
+    }
+
+    function toggleExpandAll() {
+      const detailsSections = document.querySelectorAll('.details');
+
+      detailsSections.forEach((section) => {
+        const subDetails = section.querySelector('.sub-details');
+        const expandIcon = section.previousElementSibling.querySelector('.expand');
+
+        if (subDetails.style.display === 'none') {
+          subDetails.style.display = 'block';
+          expandIcon.textContent = '▼';
+        } else {
+          subDetails.style.display = 'none';
+          expandIcon.textContent = '▶';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
