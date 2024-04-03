@@ -1,213 +1,622 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Python Data Types</title>
-  <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Data Types</title>
+    
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Your CSS styles here */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Python Data Types
+        <span class="expand-all" title="Expand All" onclick="toggleExpandAll()"
+          >▼</span
+        >
+      </h1>
 
-  <style>
-    /* Your CSS styles here */
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Python Data Types <span class="expand-all" title="Expand All" onclick="toggleExpandAll()">▼</span></h1>
-
-    <!-- Numeric Types -->
-    <div class="data-type-group" id="numeric-types">
-      <h2>Numeric Types <span class="expand" title="Expand" onclick="toggleExpand('numeric-types')">▼</span></h2>
-      <div class="details" style="display: none;">
-        <div class="data-type" id="integer">
-          <h3>Integer (int) <span class="expand" title="Expand" onclick="toggleExpand('integer')">▼</span></h3>
-          <div class="sub-details" style="display: none;">
-            <p><strong>Description:</strong> Integers are whole numbers without a decimal point. They can be positive or negative.</p>
-            <p><strong>Mutability:</strong> Immutable (static).</p>
-            <p><strong>Memory Consumption:</strong> Low.</p>
-            <pre><code class="python">an_integer = 10</code></pre>
-            <p><strong>Use Case:</strong> Storing counts or indices in a program.</p>
+      <!-- Numeric Types -->
+      <div class="data-type-group" id="numeric-types" style="display: none">
+        <div class="details" style="display: none">
+          <!-- Hide initially -->
+          <div class="data-type" id="integer">
+            <span class="check-mark" onclick="toggleBoldCheckMark(this)">✔</span>
+            <h3>
+              Integer (int)
+              <span
+                class="expand"
+                title="Expand"
+                onclick="toggleExpand('integer')"
+                >▼</span
+              >
+            </h3>
+            <div class="sub-details" style="display: none">
+              <p class="sub-detail">
+                <strong>Description:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Integers are
+                whole numbers without a decimal point. They can be positive or
+                negative.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>
+                  Integers are whole numbers without a decimal point. They can
+                  be positive or negative.
+                </p>
+              </div>
+              <p class="sub-detail">
+                <strong>Mutability:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Immutable
+                (static).
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Immutable (static).</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Memory Consumption:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Low.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Low.</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Use Case:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Storing
+                counts or indices in a program.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Storing counts or indices in a program.</p>
+              </div>
+              <pre><code class="python">an_integer = 10</code></pre>
+            </div>
           </div>
         </div>
+      </div>
 
-        <!-- Float Type -->
-        <div class="data-type" id="float">
-          <h3>Float <span class="expand" title="Expand" onclick="toggleExpand('float')">▼</span></h3>
-          <div class="sub-details" style="display: none;">
-            <p><strong>Description:</strong> Floats represent real numbers with a decimal point.</p>
-            <p><strong>Mutability:</strong> Immutable (static).</p>
-            <p><strong>Memory Consumption:</strong> Low to moderate.</p>
-            <pre><code class="python">a_float = 3.14</code></pre>
-            <p><strong>Use Case:</strong> Representing decimal values in calculations.</p>
+      <!-- Boolean Type -->
+      <div class="data-type-group" id="boolean" style="display: none">
+        <div class="details" style="display: none">
+          <!-- Hide initially -->
+          <div class="data-type" id="bool">
+            <h3>
+              Boolean (bool)
+              <span class="expand" title="Expand" onclick="toggleExpand('bool')"
+                >▼</span
+              >
+            </h3>
+            <div class="sub-details" style="display: none">
+              <p class="sub-detail">
+                <strong>Description:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Booleans
+                represent truth values, either True or False.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Booleans represent truth values, either True or False.</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Mutability:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Immutable
+                (static).
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Immutable (static).</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Memory Consumption:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Very low.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Very low.</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Use Case:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Controlling
+                program flow with conditional statements.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Controlling program flow with conditional statements.</p>
+              </div>
+              <pre><code class="python">a_boolean = True</code></pre>
+            </div>
           </div>
         </div>
+      </div>
 
-        <!-- Complex Type -->
-        <div class="data-type" id="complex">
-          <h3>Complex <span class="expand" title="Expand" onclick="toggleExpand('complex')">▼</span></h3>
-          <div class="sub-details" style="display: none;">
-            <p><strong>Description:</strong> Complex numbers have a real and imaginary part.</p>
-            <p><strong>Mutability:</strong> Immutable (static).</p>
-            <p><strong>Memory Consumption:</strong> Moderate.</p>
-            <pre><code class="python">a_complex = 2 + 3j</code></pre>
-            <p><strong>Use Case:</strong> Complex mathematical calculations.</p>
+      <!-- Sequence Types -->
+      <div class="data-type-group" id="sequence-types" style="display: none">
+        <!-- Initial display set to none -->
+        <h2>
+          Sequence Types
+          <span
+            class="expand"
+            title="Expand"
+            onclick="toggleExpand('sequence-types')"
+            >▼</span
+          >
+        </h2>
+        <div class="details" style="display: none">
+          <!-- Hide initially -->
+          <div class="data-type" id="string">
+            <h3>
+              String
+              <span
+                class="expand"
+                title="Expand"
+                onclick="toggleExpand('string')"
+                >▼</span
+              >
+            </h3>
+            <div class="sub-details" style="display: none">
+              <p class="sub-detail">
+                <strong>Description:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Strings
+                represent sequences of characters enclosed in quotes.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>
+                  Strings represent sequences of characters enclosed in quotes.
+                </p>
+              </div>
+              <p class="sub-detail">
+                <strong>Mutability:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Immutable
+                (static).
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Immutable (static).</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Memory Consumption:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Depends on
+                string length.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Depends on string length.</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Use Case:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Storing and
+                manipulating textual data.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Storing and manipulating textual data.</p>
+              </div>
+              <pre><code class="python">a_string = "Hello, World!"</code></pre>
+            </div>
+          </div>
+
+          <!-- Update List data-type -->
+          <div class="data-type" id="list">
+            <h3>
+              List
+              <span class="expand" title="Expand" onclick="toggleExpand('list')"
+                >▼</span
+              >
+            </h3>
+            <div class="sub-details" style="display: none">
+              <p class="sub-detail">
+                <strong>Description:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Lists are
+                ordered and mutable collections of items.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Lists are ordered and mutable collections of items.</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Mutability:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Mutable
+                (dynamic).
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Mutable (dynamic).</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Memory Consumption:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Depends on
+                the number of elements.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Depends on the number of elements.</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Use Case:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Storing
+                multiple items in a single variable.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Storing multiple items in a single variable.</p>
+              </div>
+              <pre><code class="python">a_list = [1, 2, 3]</code></pre>
+            </div>
+          </div>
+
+          <!-- Update Tuple data-type -->
+          <div class="data-type" id="tuple">
+            <h3>
+              Tuple
+              <span
+                class="expand"
+                title="Expand"
+                onclick="toggleExpand('tuple')"
+                >▼</span
+              >
+            </h3>
+            <div class="sub-details" style="display: none">
+              <p class="sub-detail">
+                <strong>Description:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Tuples are
+                ordered and immutable collections of items.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Tuples are ordered and immutable collections of items.</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Mutability:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Immutable
+                (static).
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Immutable (static).</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Memory Consumption:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Low.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Low.</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Use Case:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Representing
+                fixed collections of items.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Representing fixed collections of items.</p>
+              </div>
+              <pre><code class="python">a_tuple = (1, 2, 3)</code></pre>
+            </div>
+          </div>
+
+          <!-- Update Range data-type -->
+          <div class="data-type" id="range">
+            <h3>
+              Range
+              <span
+                class="expand"
+                title="Expand"
+                onclick="toggleExpand('range')"
+                >▼</span
+              >
+            </h3>
+            <div class="sub-details" style="display: none">
+              <p class="sub-detail">
+                <strong>Description:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Range is a
+                sequence of numbers generated by start, stop, and step values.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>
+                  Range is a sequence of numbers generated by start, stop, and
+                  step values.
+                </p>
+              </div>
+              <p class="sub-detail">
+                <strong>Mutability:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Immutable
+                (static).
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Immutable (static).</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Memory Consumption:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Low.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Low.</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Use Case:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Creating
+                sequences of numbers efficiently.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Creating sequences of numbers efficiently.</p>
+              </div>
+              <pre><code class="python">a_range = range(0, 10, 2)</code></pre>
+            </div>
+          </div>
+          <div class="data-type" id="bytes">
+            <h3>
+              Bytes
+              <span
+                class="expand"
+                title="Expand"
+                onclick="toggleExpand('bytes')"
+                >▼</span
+              >
+            </h3>
+            <div class="sub-details" style="display: none">
+              <p class="sub-detail">
+                <strong>Description:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Bytes
+                objects are immutable sequences of single bytes.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Bytes objects are immutable sequences of single bytes.</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Mutability:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Immutable
+                (static).
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Immutable (static).</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Memory Consumption:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Depends on
+                byte size.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Depends on byte size.</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Use Case:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Handling
+                binary data.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Handling binary data.</p>
+              </div>
+              <pre><code class="python">a_bytes = b'Hello'</code></pre>
+            </div>
+          </div>
+
+          <div class="data-type" id="bytearray">
+            <h3>
+              Bytearray
+              <span
+                class="expand"
+                title="Expand"
+                onclick="toggleExpand('bytearray')"
+                >▼</span
+              >
+            </h3>
+            <div class="sub-details" style="display: none">
+              <p class="sub-detail">
+                <strong>Description:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Bytearray
+                objects are mutable sequences of bytes.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Bytearray objects are mutable sequences of bytes.</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Mutability:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Mutable
+                (dynamic).
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Mutable (dynamic).</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Memory Consumption:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Depends on
+                byte size.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Depends on byte size.</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Use Case:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Modifying
+                binary data in-place.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Modifying binary data in-place.</p>
+              </div>
+              <pre><code class="python">a_bytearray = bytearray(b'Hello')</code></pre>
+            </div>
+          </div>
+
+          <div class="data-type" id="memoryview">
+            <h3>
+              Memoryview
+              <span
+                class="expand"
+                title="Expand"
+                onclick="toggleExpand('memoryview')"
+                >▼</span
+              >
+            </h3>
+            <div class="sub-details" style="display: none">
+              <p class="sub-detail">
+                <strong>Description:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Memoryview
+                objects provide access to the internal data of an object.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>
+                  Memoryview objects provide access to the internal data of an
+                  object.
+                </p>
+              </div>
+              <p class="sub-detail">
+                <strong>Mutability:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Immutable
+                (static).
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Immutable (static).</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Memory Consumption:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Very low
+                (shares memory).
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Very low (shares memory).</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Use Case:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Efficiently
+                work with large datasets.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Efficiently work with large datasets.</p>
+              </div>
+              <pre><code class="python">a_memoryview = memoryview(b'Hello')</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mapping Type -->
+      <div class="data-type-group" id="mapping-type" style="display: none">
+        <div class="details" style="display: none">
+          <!-- Hide initially -->
+          <div class="data-type" id="dictionary">
+            <h3>
+              Dictionary (dict)
+              <span
+                class="expand"
+                title="Expand"
+                onclick="toggleExpand('dictionary')"
+                >▼</span
+              >
+            </h3>
+            <div class="sub-details" style="display: none">
+              <p>
+                <strong>Description:</strong> Dictionaries are key-value pairs
+                of elements.
+              </p>
+              <p><strong>Mutability:</strong> Mutable (dynamic).</p>
+              <p><strong>Memory Consumption:</strong> Moderate to high.</p>
+              <pre><code class="python">a_dict = {"brand": "Ford", "model": "Mustang", "year": 1964}</code></pre>
+              <p>
+                <strong>Use Case:</strong> Storing data with associated keys for
+                fast retrieval.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Set Type -->
+      <div class="data-type-group" id="set-type" style="display: none">
+        <!-- Initial display set to none -->
+        <h2>
+          Set Type
+          <span class="expand" title="Expand" onclick="toggleExpand('set-type')"
+            >▼</span
+          >
+        </h2>
+        <div class="details" style="display: none">
+          <!-- Hide initially -->
+          <!-- Set type elements -->
+          <div class="data-type" id="set">
+            <h3>
+              Set
+              <span class="expand" title="Expand" onclick="toggleExpand('set')"
+                >▼</span
+              >
+            </h3>
+            <div class="sub-details" style="display: none">
+              <p>
+                <strong>Description:</strong> Sets are unordered collections of
+                unique elements.
+              </p>
+              <p><strong>Mutability:</strong> Mutable (dynamic).</p>
+              <p><strong>Memory Consumption:</strong> Moderate to high.</p>
+              <pre><code class="python">a_set = {1, 2, 3}</code></pre>
+              <p>
+                <strong>Use Case:</strong> Removing duplicates or testing
+                membership of elements.
+              </p>
+            </div>
+          </div>
+
+          <div class="data-type" id="frozenset">
+            <h3>
+              FrozenSet
+              <span
+                class="expand"
+                title="Expand"
+                onclick="toggleExpand('frozenset')"
+                >▼</span
+              >
+            </h3>
+            <div class="sub-details" style="display: none">
+              <p>
+                <strong>Description:</strong> Frozensets are immutable versions
+                of sets.
+              </p>
+              <p><strong>Mutability:</strong> Immutable (static).</p>
+              <p><strong>Memory Consumption:</strong> Moderate.</p>
+              <pre><code class="python">a_frozenset = frozenset({1, 2, 3})</code></pre>
+              <p>
+                <strong>Use Case:</strong> Using sets as keys in dictionaries.
+              </p>
+            </div>
+          </div>
+
+          <!-- Add other set types similarly -->
+        </div>
+      </div>
+
+      <!-- None Type -->
+      <div class="data-type-group" id="none-type" style="display: none">
+        <div class="details" style="display: none">
+          <!-- Hide initially -->
+          <div class="data-type" id="none">
+            <h3>
+              None (NoneType)
+              <span class="expand" title="Expand" onclick="toggleExpand('none')"
+                >▼</span
+              >
+            </h3>
+            <div class="sub-details" style="display: none">
+              <p class="sub-detail">
+                <strong>Description:</strong>
+                <span class="expand-detail" title="Expand">▼</span> None
+                represents the absence of a value or a null value.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>None represents the absence of a value or a null value.</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Mutability:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Immutable
+                (static).
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Immutable (static).</p>
+              </div>
+              <p class="sub-detail">
+                <strong>Memory Consumption:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Very low.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Very low.</p>
+              </div>
+              <pre><code class="python">a_none = None</code></pre>
+              <p class="sub-detail">
+                <strong>Use Case:</strong>
+                <span class="expand-detail" title="Expand">▼</span> Initializing
+                variables or denoting missing values.
+              </p>
+              <div class="sub-detail-content" style="display: none">
+                <p>Initializing variables or denoting missing values.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Boolean Type -->
-    <div class="data-type-group" id="boolean">
-      <h2>Boolean Type <span class="expand" title="Expand" onclick="toggleExpand('boolean')">▼</span></h2>
-      <div class="details" style="display: none;">
-        <div class="data-type" id="bool">
-          <h3>Boolean (bool) <span class="expand" title="Expand" onclick="toggleExpand('bool')">▼</span></h3>
-          <div class="sub-details" style="display: none;">
-            <p><strong>Description:</strong> Booleans represent truth values, either True or False.</p>
-            <p><strong>Mutability:</strong> Immutable (static).</p>
-            <p><strong>Memory Consumption:</strong> Very low.</p>
-            <pre><code class="python">a_boolean = True</code></pre>
-            <p><strong>Use Case:</strong> Controlling program flow with conditional statements.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Sequence Types -->
-    <div class="data-type-group" id="sequence-types">
-      <h2>Sequence Types <span class="expand" title="Expand" onclick="toggleExpand('sequence-types')">▼</span></h2>
-      <div class="details" style="display: none;">
-        <div class="data-type" id="string">
-          <h3>String <span class="expand" title="Expand" onclick="toggleExpand('string')">▼</span></h3>
-          <div class="sub-details" style="display: none;">
-            <p><strong>Description:</strong> Strings represent sequences of characters enclosed in quotes.</p>
-            <p><strong>Mutability:</strong> Immutable (static).</p>
-            <p><strong>Memory Consumption:</strong> Depends on string length.</p>
-            <pre><code class="python">a_string = "Hello, World!"</code></pre>
-            <p><strong>Use Case:</strong> Storing and manipulating textual data.</p>
-          </div>
-        </div>
-
-        <!-- List Type -->
-        <div class="data-type" id="list">
-          <h3>List <span class="expand" title="Expand" onclick="toggleExpand('list')">▼</span></h3>
-          <div class="sub-details" style="display: none;">
-            <p><strong>Description:</strong> Lists are mutable sequences of elements.</p>
-            <p><strong>Mutability:</strong> Mutable (dynamic).</p>
-            <p><strong>Memory Consumption:</strong> Moderate to high.</p>
-            <pre><code class="python">a_list = ["apple", "banana", "cherry"]</code></pre>
-            <p><strong>Use Case:</strong> Storing collections of items that can be modified.</p>
-          </div>
-        </div>
-
-        <!-- Tuple Type -->
-        <div class="data-type" id="tuple">
-          <h3>Tuple <span class="expand" title="Expand" onclick="toggleExpand('tuple')">▼</span></h3>
-          <div class="sub-details" style="display: none;">
-            <p><strong>Description:</strong> Tuples are immutable sequences of elements.</p>
-            <p><strong>Mutability:</strong> Immutable (static).</p>
-            <p><strong>Memory Consumption:</strong> Low to moderate.</p>
-            <pre><code class="python">a_tuple = ("apple", "banana", "cherry")</code></pre>
-            <p><strong>Use Case:</strong> Storing fixed collections of items.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Set Types -->
-    <div class="data-type-group" id="set-types">
-      <h2>Set Types <span class="expand" title="Expand" onclick="toggleExpand('set-types')">▼</span></h2>
-      <div class="details" style="display: none;">
-        <div class="data-type" id="set">
-          <h3>Set <span class="expand" title="Expand" onclick="toggleExpand('set')">▼</span></h3>
-          <div class="sub-details" style="display: none;">
-            <p><strong>Description:</strong> Sets are unordered collections of unique elements.</p>
-            <p><strong>Mutability:</strong> Mutable (dynamic).</p>
-            <p><strong>Memory Consumption:</strong> Moderate to high.</p>
-            <pre><code class="python">a_set = {"apple", "banana", "cherry"}</code></pre>
-            <p><strong>Use Case:</strong> Handling unique elements or removing duplicates.</p>
-          </div>
-        </div>
-
-        <!-- Frozen Set Type -->
-        <div class="data-type" id="frozenset">
-          <h3>Frozen Set <span class="expand" title="Expand" onclick="toggleExpand('frozenset')">▼</span></h3>
-          <div class="sub-details" style="display: none;">
-            <p><strong>Description:</strong> Frozen sets are immutable versions of sets.</p>
-            <p><strong>Mutability:</strong> Immutable (static).</p>
-            <p><strong>Memory Consumption:</strong> Low to moderate.</p>
-            <pre><code class="python">a_frozenset = frozenset({"apple", "banana", "cherry"})</code></pre>
-            <p><strong>Use Case:</strong> Creating hashable sets or fixed sets.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mapping Type -->
-    <div class="data-type-group" id="mapping-type">
-      <h2>Mapping Type <span class="expand" title="Expand" onclick="toggleExpand('mapping-type')">▼</span></h2>
-      <div class="details" style="display: none;">
-        <div class="data-type" id="dictionary">
-          <h3>Dictionary (dict) <span class="expand" title="Expand" onclick="toggleExpand('dictionary')">▼</span></h3>
-          <div class="sub-details" style="display: none;">
-            <p><strong>Description:</strong> Dictionaries are key-value pairs of elements.</p>
-            <p><strong>Mutability:</strong> Mutable (dynamic).</p>
-            <p><strong>Memory Consumption:</strong> Moderate to high.</p>
-            <pre><code class="python">a_dict = {"brand": "Ford", "model": "Mustang", "year": 1964}</code></pre>
-            <p><strong>Use Case:</strong> Storing data with associated keys for fast retrieval.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- None Type -->
-    <div class="data-type-group" id="none-type">
-      <h2>None Type <span class="expand" title="Expand" onclick="toggleExpand('none-type')">▼</span></h2>
-      <div class="details" style="display: none;">
-        <div class="data-type" id="none">
-          <h3>None (NoneType) <span class="expand" title="Expand" onclick="toggleExpand('none')">▼</span></h3>
-          <div class="sub-details" style="display: none;">
-            <p><strong>Description:</strong> None represents the absence of a value or a null value.</p>
-            <p><strong>Mutability:</strong> Immutable (static).</p>
-            <p><strong>Memory Consumption:</strong> Very low.</p>
-            <pre><code class="python">a_none = None</code></pre>
-            <p><strong>Use Case:</strong> Initializing variables or denoting missing values.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    function toggleExpand(id) {
-      const element = document.getElementById(id);
-      const subDetails = element.querySelector('.sub-details');
-      const expandIcon = element.querySelector('.expand');
-
-      if (subDetails.style.display === 'none') {
-        subDetails.style.display = 'block';
-        expandIcon.textContent = '▼';
-      } else {
-        subDetails.style.display = 'none';
-        expandIcon.textContent = '▶';
-      }
-    }
-
-    function toggleExpandAll() {
-      const detailsSections = document.querySelectorAll('.details');
-
-      detailsSections.forEach((section) => {
-        const subDetails = section.querySelector('.sub-details');
-        const expandIcon = section.previousElementSibling.querySelector('.expand');
-
-        if (subDetails.style.display === 'none') {
-          subDetails.style.display = 'block';
-          expandIcon.textContent = '▼';
-        } else {
-          subDetails.style.display = 'none';
-          expandIcon.textContent = '▶';
-        }
-      });
-    }
-  </script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

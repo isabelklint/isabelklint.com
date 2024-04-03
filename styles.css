@@ -1,18 +1,124 @@
-.container {
-    max-width: 800px;
-    margin: 20px auto;
+/* Body gradient background */
+body {
+    /* Taylor Swift Lover colors */
+    background: linear-gradient(135deg, #ffdbda, #f3f6f8);
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
   }
   
+  /* Rest of your CSS styles here */
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set body styles */
+  body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+  }
+  
+  /* Container styles */
+  .container {
+    max-width: 800px; /* Modified max-width */
+    margin: 20px auto; /* Center container horizontally */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header styles */
+  h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Data type group styles */
   .data-type-group {
     margin-bottom: 20px;
   }
   
-  .expand, .expand-all {
-    cursor: pointer;
-    margin-left: 10px;
+  /* Data type styles */
+  .data-type {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
   }
   
-  .sub-details {
-    margin-left: 20px;
+  /* Data type headings */
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
   }
+  
+  /* Sub-details styles */
+  .sub-details {
+    margin-left: 20px; /* Modified margin-left */
+    padding-left: 20px;
+    border-left: 1px solid #ccc;
+    display: none;
+  }
+  
+  /* Expand/collapse arrows */
+  .expand, .expand-all {
+    float: right;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 10px; /* Modified margin-left */
+  }
+  
+  /* Code block styles */
+  pre {
+    background-color: #f8f8f8;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+  }
+  
+  /* Code font styles */
+  code {
+    font-family: 'Roboto Mono', monospace;
+  }
+  
+  /* Hyperlink styles */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  
+/* check mark */
+
+.check-mark {
+  cursor: pointer;
+  /* other styles */
+}
+
+.bold {
+  font-weight: bold;
+}
+
   
