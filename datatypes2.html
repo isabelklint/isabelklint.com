@@ -1,0 +1,70 @@
+<div class="data-type-group" id="sequence-types">
+    <h2>
+        Sequence Types
+        <span class="expand" title="Expand" onclick="toggleExpand('sequence-types')">▼</span>
+    </h2>
+    <div class="details" style="display: none">
+        <!-- Hide initially -->
+        <div class="data-type" id="string">
+            <h3>
+                String
+                <span class="expand" title="Expand" onclick="toggleExpand('string')">▼</span>
+            </h3>
+        </div>
+    <div>
+        <div class="data-type" id="list">
+            <h3>
+                List
+                <span class="expand" title="Expand" onclick="toggleExpand('list')">▼</span>
+            </h3>
+            <div class="sub-details" style="display: none">
+                <p class="sub-detail">
+                    <strong>Description:</strong>
+                    Lists are ordered and mutable collections of items.
+                </p>
+                <p class="sub-detail">
+                    <strong>Mutability:</strong>
+                    Mutable (dynamic).
+                </p>
+                <p class="sub-detail">
+                    <strong>Memory Consumption:</strong>
+                    Depends on the number of elements.
+                </p>
+                <p class="sub-detail">
+                    <strong>Use Case:</strong>
+                    Storing multiple items in a single variable.
+                </p>
+                <pre>
+                    <code class="python">a_list = [1, 2, 3]</code>
+                </pre>
+            </div>
+        </div>
+        <div class="data-type" id="tuple">
+            <h3>
+                Tuple
+                <span class="expand" title="Expand" onclick="toggleExpand('tuple')">▼</span>
+            </h3>
+            <div class="sub-details" style="display: none">
+                <p class="sub-detail">
+                    <strong>Description:</strong>
+                    Tuples are ordered and immutable collections of items.
+                </p>
+                <p class="sub-detail">
+                    <strong>Mutability:</strong>
+                    Immutable (static).
+                </p>
+                <p class="sub-detail">
+                    <strong>Memory Consumption:</strong>
+                    Low.
+                </p>
+                <p class="sub-detail">
+                    <strong>Use Case:</strong>
+                    Representing fixed collections of items.
+                </p>
+                <pre>
+                    <code class="python">a_tuple = (1, 2, 3)</code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</div>
